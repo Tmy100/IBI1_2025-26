@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 I like tea 
 I like he
 I like she
@@ -8,3 +9,16 @@ I like you
 I like sun
 I like moon very much
 I like lily
+=======
+I like tea 
+I like he
+I like she
+I like it
+I like them
+I like tulips
+I like tree
+I like drinking
+I like dancing
+I like snorkelling
+I don't like soil
+>>>>>>> Alex
