@@ -8,3 +8,5 @@ I like tulips
 I like tree
 I like leaf
 I like sun
+I like rain
+I don't like soil
