@@ -1,0 +1,4 @@
+Hello, my name is Ming Yi.
+I like drinking bubble tea and eating pasta.
+I am enjoying studying in IBI1 class. 
+I am happy that I can push my repo from Visual Studio Code to GitHub.
