@@ -1,0 +1,30 @@
+#Variables.py
+#estimated population of Scotland in 2004(a),2014(b),2024(c)
+#the change in population between 2004 and 2014(d)
+#the change in population between 2014 and 2024(e)
+
+a=5.08*10**6
+b=5.33*10**6
+c=5.55*10**6
+
+d=b-a
+print("%.0f" %d) #float: 0f,zero declimal point; 1f, one declimal point
+#250000.0
+
+e=c-b
+print(e)
+#220000.0
+
+#compare d and e
+#Larger:d
+#Population Growth: Decelarating
+
+#Booleans:
+X=True
+Y=False
+w=X or Y
+print(w)
+
+#what does the truth table for W look like?
+#True
+
