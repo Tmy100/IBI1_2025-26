@@ -3,4 +3,4 @@ Reflection of learning IBI
 What I have learnt: I have learnt how to use Visual Studio Code to push my files to my GitHub.
 Moreover, I learnt to fix my problem by seeking help from people and internet resources.
 
-What I need to improve: I need to keep practising the command, so that I can type it out whenever I need it, but not check my notes.
+What I need to improve: I need to keep practising the command, so that I can type it out whenever I need it, without checking my notes.
