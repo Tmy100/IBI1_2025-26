@@ -19,7 +19,7 @@ while progress<=10:
 	#print(n)
 print(total_rand)
 
-# hypothesis: The variable 'total_rand' will equal to the sum of all the random 'n' values generated in the loop.
+# hypothesis: The variable 'total_rand' will be equal to the sum of all the random 'n' values generated in the loop.
 # experiment: I added 'print (n)' and I sum up the printed numbers manually.
 # result: The final number printed from 'total_rand' exactly matched my manual sum, proving the hypothesis.
 
