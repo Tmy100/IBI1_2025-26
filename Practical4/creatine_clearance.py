@@ -1,13 +1,15 @@
+#Creatine_clearance.py
+#Aim: calculate the person's Crcl rate.
 
-
-#initial variables
+#Step1： Input the values for each variable. 
 gender="female" #cannot write as gender=female
 age=int(input("What is the age?"))
 weight=int(input("what is the weight?"))
 gender=input("what is the gender?")
 cr=int(input("what is the cr?"))
 
-#validation checks
+#Step2: IF the values fulfil the threshold, do calculations
+#       ELSe print error and input the values again
 if age >=100 :
     print ("Age needs corrected. Choose a variable <100")
 elif weight >=80 and weight <=20:
@@ -19,7 +21,7 @@ elif cr <=0 and cr >=100:
 else:
     print("everything nice")
 
-    #calculations
+    #Step3: Calculate the Crcl using different equation.
     if gender == "male":
             Crcl=(140-age)*weight/(72*cr)
             print("Crcl for male is",Crcl)
