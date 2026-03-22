@@ -24,7 +24,7 @@ else:
     #Step3: Calculate the Crcl using different equation.
     if gender == "male":
             Crcl=(140-age)*weight/(72*cr)
-            print("Crcl for male is",Crcl)
+            print("Crcl for male is %d" %Crcl)
     elif gender == "female": 
             Crcl=(140-age)*weight/(72*cr)*0.85
             print("Crcl for female is %d" %Crcl) #to make it into an integer
