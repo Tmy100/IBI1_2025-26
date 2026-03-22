@@ -24,9 +24,9 @@ for x  in heart_rate:
        
 
 #determine the largest number of patients
-print ("patients in low category:", Low)
-print ("patients in norm category:", Normal)
-print ("patients in high category:", High)
+print ("patients in low category:", len(Low))
+print ("patients in norm category:", len(Normal))
+print ("patients in high category:", len(High))
 
 if len(Low) >( len(Normal) and len(High)):
     print ("The largest category:Low")
