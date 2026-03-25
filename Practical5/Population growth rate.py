@@ -1,4 +1,4 @@
-#population growth rate
+# Part1: Create a dictionary of population data.
 population_data = {
     'UK': {'pop2020': 66.7, 'pop2024': 69.2},
     'China': {'pop2020': 1426.0, 'pop2024': 1410.0},
@@ -7,20 +7,22 @@ population_data = {
     'USA': {'pop2020': 331.6, 'pop2024': 340.1}
 }
 
+# Initialize a dictionary to store the calculated percentage changes
 percent_changes = {}
 
 for country, pops in population_data.items():
     pop2020 = pops['pop2020']
     pop2024 = pops['pop2024']
     
+    # Calculate the "change" value
     # Formula: ((pop2024 - pop2020) / pop2020) * 100
     change = ((pop2024 - pop2020) / pop2020) * 100
     percent_changes[country] = change
     
-    # .2f formats the number to 2 decimal places
+    # Print the calculated percentage change for each country
     print(f"{country}: {change:.2f}%") 
 
-# Print descending order and identify extremes
+# Part2: Print descending order and identify extremes
 sorted_changes = sorted(percent_changes.items(), key=lambda item: item[1], reverse=True)
 
 for country, change in sorted_changes:
@@ -41,34 +43,33 @@ print(f"Largest Decrease: {largest_decrease_country} ({largest_decrease_value:.2
 countries = [item[0] for item in sorted_changes]
 changes = [item[1] for item in sorted_changes]
 
-#create a bar chart
+# Part3: Create a bar chart
 import matplotlib.pyplot as plt
 plt.figure(figsize=(10, 6))
 
-# Create the bars
+# Plot the bar chart data
 bars = plt.bar(countries, changes)
 
 # Add a horizontal line at 0 to clearly separate positive/negative growth
 plt.axhline(0, color='black', linewidth=1)
 
-# Formatting: Adding labels and a title
+# Add labels and a title
 plt.title('Percentage Change in Population (2020 vs 2024)', fontsize=14)
 plt.xlabel('Country', fontsize=12)
 plt.ylabel('Percentage Change (%)', fontsize=12)
 
-# Optional visual improvement: Make positive bars green and negative bars red
+# Change bar colours to red (negative) and green (positive)
 for bar in bars:
     if bar.get_height() < 0:
         bar.set_color('salmon')
     else:
         bar.set_color('lightgreen')
 
-# Optional visual improvement: Add the exact numbers on top/bottom of the bars
+# Add the exact numbers on top/bottom of the bars
 for bar in bars:
     yval = bar.get_height()
     # Adjust position slightly depending on if the bar is positive or negative
     offset = 0.1 if yval >= 0 else -0.25 
     plt.text(bar.get_x() + bar.get_width()/2, yval + offset, f'{yval:.2f}%', ha='center', fontweight='bold')
 
-# Display the chart
 plt.show()
