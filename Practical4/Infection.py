@@ -1,5 +1,5 @@
 #Infection.py
-#Aim: calculate the num of days for the entire IBI1 class to become infected based on two starting variables.
+#Aim: calculate the number of days for the entire IBI1 class to become infected based on two starting variables.
 
 #Step1: list variables + print the initial values
 #		the number of infected students(a)
@@ -16,7 +16,7 @@ print("Day",d,":",a,"students infected")
 #Step2: calculate infected students using loop + print day and the number of infected students
 #Logic: start from 5 students, end when it reached 91 students.
 # 		IF accumulated infected students < the number of whole class, THEN accumulate the day +1
-#		AND total infected students= (initial infect. num)+(initial infect. num)*(growth rate)
+#		total infected students = (initial infect. num)+(initial infect. num)*(growth rate)
 
 while a<c:
 	d += 1
