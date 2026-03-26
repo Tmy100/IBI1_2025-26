@@ -25,6 +25,7 @@ for country, pops in population_data.items():
 # Part2: Print descending order and identify extremes
 sorted_changes = sorted(percent_changes.items(), key=lambda item: item[1], reverse=True)
 
+print("\nPopulation changes (largest to smallest):")
 for country, change in sorted_changes:
     print(f"{country}: {change:.2f}%")
 
