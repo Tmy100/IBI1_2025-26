@@ -1,7 +1,7 @@
 #Part1: Create and print a dictionary
 gene_dict = {
     "TP53":12.4, 
-    "EFGR":15.1, 
+    "EGFR":15.1, 
     "BRCA1":8.2, 
     "PTEN":5.3, 
     "ESR1":10.7 }  
