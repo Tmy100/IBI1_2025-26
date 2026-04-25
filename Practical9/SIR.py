@@ -63,6 +63,8 @@ S = np.array(list_S)
 I = np.array(list_I)
 R = np.array(list_R)
 
+plt.figure(figsize=(6,4),dpi=150)
+
 plt.plot(S,c="#0099ff", label="susceptible")
 plt.plot(I,c="#ff6600", label="infected")
 plt.plot(R,c="#33cc33", label="recovered")
@@ -72,6 +74,6 @@ plt.ylabel('Population number')
 plt.title('SIR model')
 
 plt.grid()
-
-
+plt.savefig(r"C:\Users\User\OneDrive\Desktop\IBI1\IBI1_2025-26\Practical9\SIR_model.png")
 plt.show()
+
