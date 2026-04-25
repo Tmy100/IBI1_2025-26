@@ -1,0 +1,12 @@
+==Question==
+What was the distribution of DALYs across all countries in 2019?
+
+==Line Number where the question is addressed==
+52 until 61
+
+==Result discussion==
+The DALYs distribution in the whole world in 2019 is around the range of 20000 until 30000, while some is above 30000.
+The DALYs distribution is different from my expectation. I expect the mean will fall in the range of 30000 and 40000.
+However, due to the advance improvement in medical industry, the mortility rate and infected rate of disease have been reduced significantly.
+Thus, my assumption overlooked the development of health department across the world.
+
