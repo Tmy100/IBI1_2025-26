@@ -1,0 +1,6 @@
+#download and open the fasta file
+#read the first sentence using head function
+#file handle
+input= open('.fasta','r')
+for line in input:
+    print (line)
