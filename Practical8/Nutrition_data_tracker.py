@@ -47,6 +47,7 @@ def calculate_with_list (food_list):
 
     return totals
 
+#_______Editing part for different individual_______
 #List of food that the individual has consumed last 24hr period
 chicken_breast = food_item("Chicken_breast",101000,18,0,1)
 potatoes = food_item("Potatoes", 95000,2,45,0)
