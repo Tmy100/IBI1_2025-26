@@ -1,4 +1,7 @@
-#1. Create a class called food_item to track the nutritional input  
+#Nutrition_data_tracker
+#Calculate and report the total calories,protein,carbohydrate and fat consumed by an individual over a 24hrs period.
+
+#Create a class called food_item to track the nutritional input  
 class food_item ():
     def __init__ (self,name,a,b,c,d):
             self.name = name
@@ -15,7 +18,7 @@ food_intake = food_item("Apple",60,0.3,15,0.5)
 food_intake.nutrients()
 
 
-#2. Create a function to calculate and report the total nutrients
+#Create a function to calculate and report the total nutrients
 def calculate_with_list (food_list):
     '''
     Calculate and report the total calories, protein, carbohydrate and fat consumed over a 24hr period.
@@ -43,20 +46,22 @@ def calculate_with_list (food_list):
     print (f'Total fat:{totals[3]}g')
 
     return totals
-# List of food that the individual has consumed last 24hr period
+
+#List of food that the individual has consumed last 24hr period
 chicken_breast = food_item("Chicken_breast",101000,18,0,1)
 potatoes = food_item("Potatoes", 95000,2,45,0)
 white_rice = food_item("White_rice",205000,4,45,0)
 brocolli = food_item("Brocolli",7000,0.6,1.5,0)
 
-# Put them in a list
+#Put them in a list
 foods = [chicken_breast,potatoes,white_rice,brocolli]
-calculated_totals = calculate_with_list(foods)
 
+#Calculate the total cal,pro,carbs,fat
+calculated_totals = calculate_with_list(foods)
 total_cal = calculated_totals[0]
 total_fat = calculated_totals[3]
 
-
+#Give the individual warning if he/she consumed too much calories and fat
 if total_cal >= 2500 and total_fat >= 90:
     print ("Warning! You have consumed more than 2500 calories and 90g fat.")
 elif total_cal < 2500 and total_fat >= 90:
