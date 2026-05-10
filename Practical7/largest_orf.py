@@ -1,42 +1,33 @@
-# Open Reading Frames (ORF)
-# search the longest chain
+#Largest_orf
+#Identify they largest ORF and its nucleotide length.
 
-seq = 'AAGAUACAUGCAAGUGGUGUGUCUGUUCUGAGAGGGCCUAAAAG'
-
-# search the start point AUG, no space, 3 as a group
-# start codon begin at anywhere
 import re
-targets = ["AUG", "UAA", "UGA", "UAG"]
 
-for codon in targets:
-    match = re.search(f"({codon})", seq) 
+seq = 'AAGAUACAUGCAAGUGGUGUGUCUGUUCUGAGAGGGCCUAAAAAG'
+stop_codons = ["UAA", "UGA", "UAG"]
+
+#Store all found chains in a list
+all_found_chains = []
+
+
+for stop in stop_codons:
+    #greedy search
+    pattern = f"AUG.*{stop}"
+    matches = re.findall(pattern, seq)
     
-    if match:
-        print("Codon exist:",match)
+    #find for all stop codons that existing in the seq
+    if matches:
+        print(f"Stop codon '{stop}' do exist")
+        all_found_chains.extend(matches) #save the existed chains into the list
     else:
-        print("none\n") # create a newline (/n)
+        print(f"Stop codon '{stop}' doesn't exist")
 
-# UAA, UGA exist, but UAG doesn't exist
-
-# Logic: find AUG, stop at UAG
-#   if there is UAG, print the output
-#	else run again and stop at UAA
-#	else run again and stop at UGA
-
-result_UAA = re.findall(r"AUG.*UAA", seq)
-
-result_UGA = re.findall(r"AUG.*UGA", seq)
-
-# If len(UGA) > len(UAA):
-# print "largest:" (UGA) and len(UGA)
-# else print UAA using same printing format.
-[chain1]= result_UAA
-[chain2]= result_UGA
-
-if len(chain1) > len(chain2):
-	print("longest:",chain1)
-	print("length:", len(chain1))
+#determine the longest chain
+if len(all_found_chains) > 0:
+    
+    longest_chain = max(all_found_chains, key=len)
+    
+    print("\nThe longest chain:", longest_chain)
+    print("The length of the chain:", len(longest_chain), "nucleotides")
 else:
-    print("longest:", chain2)
-    print("length:", len(chain2))
-
+    print("There is not a complete chain exist.")
