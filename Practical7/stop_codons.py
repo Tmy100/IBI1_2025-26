@@ -1,7 +1,9 @@
-# Define the stop codons in a list (easier than a dictionary for this)
+#Stop_codons
+#Read a fasta file and output the gene names, the stop codons found and the gene's cDNA sequence into a fasta file
+
 stop_codons = ['TAA', 'TGA', 'TAG']
 
-# handle opening and closing files
+#Read and write the file
 with open('Saccharomyces_cerevisiae.R64-1-1.cdna.all (3).fa', 'r') as fasta_file, \
      open('stop_genes.fa', 'w') as out_file:
     
@@ -9,43 +11,57 @@ with open('Saccharomyces_cerevisiae.R64-1-1.cdna.all (3).fa', 'r') as fasta_file
     current_seq = ""
     
     for line in fasta_file:
-        line = line.strip() # Remove newline characters (\n) immediately
+        line = line.strip() #Make the seq stick together as a longchain
         
-        # If the line is a header
+        #Identify the marker ">" and start reading
         if line.startswith('>'):
-            # 1. PROCESS THE PREVIOUS GENE (if one exists)
-            # We check if current_seq has data. If it does, we just finished 
-            # reading a complete gene and hit the next header.
+            #Check if there is a complete seq, else end.
             if current_seq != "":
-                # Get the last 3 letters of the accumulated sequence
-                last_codon = current_seq[-3:] 
                 
-                # If it's a stop codon, write it to the file
-                if last_codon in stop_codons:
-                    # Write Header ; StopCodon
-                    out_file.write(f"{current_gene_id} ; {last_codon}\n")
-                    # Write the full sequence on the next line
-                    out_file.write(f"{current_seq}\n")
-            
-            # 2. PREPARE FOR THE NEW GENE
-            # Extract the ID (split by space and take the first part)
+                #Store the stop codons that were found in a list
+                found_codons = []
+                
+                #Check if the stop codons existed in the seq
+                for codon in stop_codons:
+                    if codon in current_seq:  
+                        found_codons.append(codon)
+                
+                #If there is more than one stop codons, print them out
+                if len(found_codons) > 0:
+                    codons_str = ",".join(found_codons)
+                    new_header = f"{current_gene_id}_{codons_str}"
+
+                #If there are no stop codons existed, only print the gene name
+                else:
+                    new_header = f"{current_gene_id}" 
+                
+                #Write the new header and seq into the output file
+                out_file.write(f"{new_header}\n")
+                out_file.write(f"{current_seq}\n")
+
+            #(Repeat) Search for a new gene and reset everything
             fields = line.split(' ')
             current_gene_id = fields[0]
-            # Reset the sequence accumulator to empty for the new gene
-            current_seq = "" 
+            current_seq = ""
             
-        # If the line is sequence data
+        #If it is a seq data, accumulate the line
         else:
-            # Add the sequence line to our growing sequence string
             current_seq += line
 
-    # 3. PROCESS THE VERY LAST GENE IN THE FILE
-    # After the loop finishes, the final gene hasn't been processed yet 
-    # because there is no ">" line after it to trigger the saving process.
+    #Process the last gene
     if current_seq != "":
-        last_codon = current_seq[-3:]
-        if last_codon in stop_codons:
-            out_file.write(f"{current_gene_id} ; {last_codon}\n")
-            out_file.write(f"{current_seq}\n")
+        found_codons = []
+        for codon in stop_codons:
+            if codon in current_seq:
+                found_codons.append(codon)
+        
+        if len(found_codons) > 0:
+            codons_str = "_".join(found_codons)
+            new_header = f"{current_gene_id}_{codons_str}"
+        else:
+            new_header = f"{current_gene_id}"
             
+        out_file.write(f"{new_header}\n")
+        out_file.write(f"{current_seq}\n")
+
 print("Processing complete. Check stop_genes.fa")
