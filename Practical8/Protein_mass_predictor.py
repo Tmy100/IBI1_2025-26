@@ -3,7 +3,8 @@ import re
 
 def predict_protein_mass():
     '''
-    Takes an amino acid sequence, returns the mass of the total protein in amu.
+    Input an amino acid sequence in symbols
+    Returns the mass of the total protein in amu.
     Report error if amino acid not defined correctly and cannot be found.
     '''
 
