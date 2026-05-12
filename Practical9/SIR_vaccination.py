@@ -17,9 +17,9 @@ gamma = 0.05
 #Outer loop: goes through every rate
 for rate in v_rate:
 
-    N = 10000
+    N = 10000 #total population
     I_count = 1
-    V_count=int(N* rate)
+    V_count=int(N* rate) #vaccinated population
     S_count = N-I_count-V_count
 
     #To avoid geting negative S_count:
