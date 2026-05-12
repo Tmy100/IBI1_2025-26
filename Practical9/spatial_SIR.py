@@ -35,7 +35,7 @@ for t in range(int(time)):
         y = infectedIndex[1][i]
         
         #8. Loop through the 3x3 grid centered on the infected cell (x, y)
-        #To check its surrounding infected neighbours
+        #To check its surrounding neighbours
         for xNeighbour in range(x-1, x+2):
             for yNeighbour in range(y-1, y+2):
                 #Skip the center cell itself (an individual cannot infect themselves)
