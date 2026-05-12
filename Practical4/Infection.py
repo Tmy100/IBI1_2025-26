@@ -21,7 +21,7 @@ print("Day",d,":",a,"students infected")
 while a<c:
 	d += 1
 	a=a+a*b
-	a=a-a%1 #this step is to round up the declimal points
+	
 	print("Day %d : %.0f students infected"%(d,a))
 
 

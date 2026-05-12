@@ -85,4 +85,6 @@ else:
     plt.legend(wedges, labels, title="Codons", loc="center left", bbox_to_anchor=(1, 0.5), ncol=2)
     plt.title(f"Distribution of Codons (Stop Codon: {user_stop})")
     plt.tight_layout()
+    output_filename = f"distribution_all_in_frame_codons_{user_stop}.png"
+    plt.savefig(output_filename, dpi=300)''
     plt.show()

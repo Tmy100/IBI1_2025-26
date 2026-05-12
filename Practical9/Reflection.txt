@@ -1,9 +1,9 @@
-Overall, I found this practical challenging but useful for improving both my programming and logical thinking skills.
+Overall, I found this practical challenging but useful for improving my programming and logical thinking skills. 
+I especially enjoyed creating colourful graphs that clearly visualised the results and made them easier to understand.
 
-In the first exercise (simple SIR model), I initially tried to set up the variables independently, but my mathematical logic was not accurate, which caused incorrect calculations. Thus, I think I should strengthen my basic mathematical and problem-solving skills before tackling more complex models.
+However, I found it difficult to code how infected individuals spread infection to neighbouring susceptible individuals because the logic involved many conditions and interactions. 
+After attempting it myself, I referred to the script provided in the folder to better understand the implementation.
 
-For the second exercise (SIR vaccination), I struggled with generating and labeling the graph correctly, as my output did not match the guidance. I solved this with the help of AI, but I realized that I still need more practice with plotting graphs and understanding visualization tools in Python.
-
-In the third exercise (spatial SIR), I was able to design the overall logic flow, but I found it difficult to code how infected individuals spread infection to neighbouring susceptible individuals. I referred to the provided infection_snippet.py code to better understand and implement this process.
-
-In conclusion, although the guidance provided useful commands and hints, there was still a large gap between understanding the concept and implementing the logic correctly. I often struggled to write complete pseudocode because my logic contained many errors. Moving forward, I plan to improve my Python skills through self-learning so that I can better connect logic, pseudocode, and coding implementation.
+The most important lesson I learned is that logical thinking is essential for writing good pseudocode and programs. 
+If the logic is not detailed enough, important conditions may be overlooked and cause errors. 
+I also realised the importance of self-learning, as many of the coding techniques I used were learned through online resources.

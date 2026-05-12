@@ -58,8 +58,8 @@ for rate in v_rate:
 
     plt.plot(infected_history,label=label_text, color=cm.viridis(rate))
 
-plt.legend (title="Vaccination rate")
-plt.grid()
-plt.savefig(r"C:\Users\User\OneDrive\Desktop\IBI1\IBI1_2025-26\Practical9\SIR_vaccination.png")
+    plt.legend (title="Vaccination rate")
+    plt.grid()
+    plt.savefig(r'C:\Users\User\OneDrive\Desktop\IBI1\IBI1_2025-26\Practical9\SIR_vaccination.png')
 plt.show()
 

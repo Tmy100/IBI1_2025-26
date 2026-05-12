@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: It will add up all the random numbers obtained in each round, and the final result is the sum of the random numbers obtained in all eleven rounds.
+# Answer: It will add up all the random numbers obtained in each round, and the final result is the sum of the random numbers which were generated between 1 and 10 obtained in all eleven rounds.
 
 # Import libraries
 # randint allows drawing a random number,
@@ -14,7 +14,7 @@ total_rand = 0
 progress=0
 while progress<=10:
 	progress+=1
-	n = randint(1,10)
+	n = randint(1,10) 
 	total_rand+=n
 	#print(n)
 print(total_rand)

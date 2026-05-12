@@ -59,6 +59,6 @@ plt.ylabel('Population number')
 plt.title('SIR model')
 
 plt.grid()
-plt.savefig(r"C:\Users\User\OneDrive\Desktop\IBI1\IBI1_2025-26\Practical9\SIR_model.png")
+plt.savefig(r'C:\Users\User\OneDrive\Desktop\IBI1\IBI1_2025-26\Practical9\SIR_model.png')
 plt.show()
 
