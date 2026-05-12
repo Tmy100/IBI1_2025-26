@@ -1,0 +1,13 @@
+Scripts that I have edited: 1) infection.py and 2)mystery_code.py
+
+The changes that I have made: 
+1) I removed line 24, which was a = a - a % 1. This step was used to round up the decimal points of the infected students. 
+After removing it, the results changed from initially requiring 11 days for all 91 students to be infected to only requiring 10 days.
+
+2) I edited the comment in line 2 by adding “which were generated between 1 and 10.” 
+This made the code more specific in describing that it sums up numbers from 1 to 10.
+
+
+
+
+
